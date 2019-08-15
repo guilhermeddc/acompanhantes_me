@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <!--Main Layout-->
+    <main>
+
+        <div class="container">
+
+            <!--Section: Slider -->
+            {% include 'pages/components/slider.html' %}
+            <!--Section: Slider -->
+
+            <hr class="mb-5 mt-4">
+
+            <!--Section: Gallery -->
+            {% include 'pages/components/gallery.html' %}
+            <!--Section: Gallery -->
+
+
+        </div>
+
+        <!-- Streak Section -->
+        {% include 'pages/components/streak.html' %}
+        <!-- /.Streak Section -->
+
+        <div class="container">
+
+            <!--Projects section v.4-->
+            {% include 'pages/components/projects.html' %}
+            <!--Projects section v.4-->
+
+        </div>
+
+    </main>
+    <!--Main Layout-->
+
+{% endblock %}

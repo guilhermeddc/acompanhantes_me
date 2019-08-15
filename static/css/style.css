@@ -4,7 +4,12 @@ header,
 .jarallax {
     height: 700px;
 }
-
+a {
+    color: #ec407a;
+}
+a:hover {
+    color: pink;
+}
 @media (max-width: 740px) {
     html,
     body,
@@ -44,7 +49,7 @@ header,
 }
 
 .top-nav-collapse {
-    background-color: #7283A7 !important;
+    background-color: #EC407A !important;
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -53,13 +58,13 @@ header,
 
 @media (max-width: 768px) {
     .navbar:not(.top-nav-collapse) {
-        background: #7283A7 !important;
+        background: #EC407A !important;
     }
 }
 
 @media (min-width: 800px) and (max-width: 850px) {
     .navbar:not(.top-nav-collapse) {
-        background: #7283A7 !important;
+        background: #EC407A !important;
     }
 }
 

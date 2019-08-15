@@ -1,0 +1,74 @@
+{% load static %}
+
+<section class="section pb-3 wow fadeIn" data-wow-delay="0.3s">
+
+    <!--Section heading-->
+    <h1 class="font-weight-bold text-center h1 my-5">Acompanhantes<strong>.me</strong></h1>
+    <!--Section description-->
+    <p class="text-center grey-text mb-5 mx-auto w-responsive">Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Fugit, error amet numquam iure provident voluptate esse
+        quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.</p>
+
+    <!--Grid row-->
+    <div class="row">
+
+        {% for object in object_list %}
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <!--Card-->
+                <div class="card card-ecommerce">
+
+                    <!--Card image-->
+                    <div class="view overlay z-depth-1">
+                        <img src="{{ object.profile_picture.url }}"
+                             class="card-img-top"
+                             alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card image-->
+
+                    <!--Card content-->
+                    <div class="card-body text-center no-padding">
+                        <!--Category & Title-->
+                        <h4 class="card-title">
+                            <strong>
+                                <a href="">{{ object.first_name }}</a>
+                            </strong>
+                        </h4>
+
+                        <!--Description-->
+                        <p class="card-text">{{ object.age }}</p>
+
+                        <!--Card footer-->
+                        <div class="card-footer">
+                  <span class="float-left">{{ object.cacheForHours }}
+{#                    <span class="discount">199$</span>#}
+                  </span>
+                            <span class="float-right">
+                    <a class="active" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                      <i class="fas fa-heart"></i>
+                    </a>
+                  </span>
+                        </div>
+
+                    </div>
+                    <!--Card content-->
+
+                </div>
+                <!--Card-->
+
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+    <!--Grid row-->
+
+</section>
+<!--Section: Products v.3-->
+
