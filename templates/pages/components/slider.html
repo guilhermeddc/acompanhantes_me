@@ -36,46 +36,43 @@
 
             <!--First slide-->
             <div class="carousel-item active">
+                {% for object  in object_list %}
+                    <div class="col-md-4">
 
-                <div class="col-md-4">
 
-                    <!--Card-->
-                    <div class="card card-cascade narrower card-ecommerce">
+                        <!--Card-->
+                        <div class="card card-cascade narrower card-ecommerce">
 
-                        <!--Card image-->
-                        <div class="view view-cascade overlay">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(39).jpg"
-                                 class="card-img-top"
-                                 alt="">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <!--Card image-->
+                            <!--Card image-->
+                            <div class="view view-cascade overlay">
+                                <img src="{{ object.profile_picture.url }}"
+                                     class="card-img-top"
+                                     alt="">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card image-->
 
-                        <!--Card content-->
-                        <div class="card-body card-body-cascade text-center no-padding">
-                            <!--Category & Title-->
-                            <a href="" class="text-muted">
-                                <h5>Shoes</h5>
-                            </a>
-                            <h4 class="card-title pink-text">
-                                <strong>
-                                    <a href="">Leather boots</a>
-                                </strong>
-                            </h4>
+                            <!--Card content-->
+                            <div class="card-body card-body-cascade text-center no-padding">
+                                <!--Category & Title-->
+                                <a href="" class="text-muted">
+                                    <h5>{{ object.first_name }}</h5>
+                                </a>
+                                <h4 class="card-title pink-text">
+                                    <strong>
+                                        <a href="">{{ object.first_name }} {{ object.last_name }}</a>
+                                    </strong>
+                                </h4>
 
-                            <!--Description-->
-                            <p class="card-text">Temporibus autem quibusdam et aut officiis debitis aut
-                                rerum
-                                necessitatibus
-                                saepe eveniet ut et voluptates.
-                            </p>
+                                <!--Description-->
+                                <p class="card-text">{{ object.description }}</p>
 
-                            <!--Card footer-->
-                            <div class="card-footer">
-                                <span class="float-left">69$</span>
-                                <span class="float-right">
+                                <!--Card footer-->
+                                <div class="card-footer">
+                                    <span class="float-left">{{ object.cacheForHours }}</span>
+                                    <span class="float-right">
                         <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look">
                           <i class="fas fa-eye"></i>
                         </a>
@@ -83,16 +80,16 @@
                           <i class="fas fa-heart"></i>
                         </a>
                       </span>
+                                </div>
+
                             </div>
+                            <!--Card content-->
 
                         </div>
-                        <!--Card content-->
+                        <!--Card-->
 
                     </div>
-                    <!--Card-->
-
-                </div>
-
+                {% endfor %}
                 <div class="col-md-4 clearfix d-none d-sm-block">
 
                     <!--Card-->

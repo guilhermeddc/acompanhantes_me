@@ -11,23 +11,48 @@
         </button>
         <div class="collapse navbar-collapse align-content-center" id="navbarSupportedContent-7">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
-{#                        <span class="sr-only">(current)</span>#}
+                <li class="nav-item {# active #}">
+                    <a class="nav-link" href="#">Inicio
+                        <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
+                    <a class="nav-link" href="#">Modelos</a>
                 </li>
             </ul>
-            <form class="form-inline">
+            <div class="btn-group navbar-nav mr-auto" role="group">
+                        <button id="btn1" type="button" class="text-light btn dropdown-dark"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Categorias
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btn">
+                            <a class="dropdown-item" href="#">Loiras</a>
+                            <a class="dropdown-item" href="#">Morenas</a>
+                            <a class="dropdown-item" href="#">Ruivas</a>
+                            <a class="dropdown-item" href="#">Orientais</a>
+                            <a class="dropdown-item" href="#">Duplas</a>
+                            <a class="dropdown-item" href="#">Mulatas</a>
+                        </div>
+                    </div>
+            <form class="form-inline mr-auto">
                 <div class="md-form my-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Escolha uma Cidade" aria-label="Cidade">
                 </div>
             </form>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cadastre-se</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contato</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

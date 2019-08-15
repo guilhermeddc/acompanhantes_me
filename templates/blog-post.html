@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base/base.html' %}
 
-<head>
-  <!--  Required meta tags always come first  -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap Template</title>
-  <!--  Font Awesome  -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="../css/mdb.min.css" rel="stylesheet">
+{% load static %}
+
+{% block title %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
   <style>
     .navbar {
             background-color: #6f7782;
@@ -25,49 +19,6 @@
 </head>
 
 <body>
-
-  <!--Main Navigation-->
-  <header>
-
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Opinions</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item">
-              <a class="nav-link"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"><i class="fab fa-instagram"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-  </header>
-  <!--Main Navigation-->
 
   <!--Main Layout-->
   <main>
@@ -482,67 +433,51 @@
   </main>
   <!--Main Layout-->
 
-  <!--Footer-->
-  <footer class="page-footer pt-0">
-
-    <!--Footer Links-->
-    <div class="container">
-
-      <!--First row-->
-      <div class="row">
-
-        <!--First column-->
-        <div class="col-md-12 wow fadeIn" data-wow-delay="0.3s">
-
-          <div class="text-center d-flex justify-content-center my-4">
-
-            <!--Facebook-->
-            <a class="p-2 m-2 fa-lg fb-ic"><i class="fab fa-facebook-f white-text fa-lg pr-md-4"> </i></a>
-            <!--Twitter-->
-            <a class="p-2 m-2 fa-lg tw-ic"><i class="fab fa-twitter white-text fa-lg pr-md-4"> </i></a>
-            <!--Google +-->
-            <a class="p-2 m-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g white-text fa-lg pr-md-4"> </i></a>
-            <!--Linkedin-->
-            <a class="p-2 m-2 fa-lg li-ic"><i class="fab fa-linkedin-in white-text fa-lg pr-md-4"> </i></a>
-            <!--Instagram-->
-            <a class="p-2 m-2 fa-lg ins-ic"><i class="fab fa-instagram white-text fa-lg pr-md-4"> </i></a>
-            <!--Pinterest-->
-            <a class="p-2 m-2 fa-lg pin-ic"><i class="fab fa-pinterest white-text fa-lg pr-md-4"> </i></a>
-          </div>
-
-        </div>
-        <!--/First column-->
-
-      </div>
-      <!--/First row-->
-
-    </div>
-    <!--/Footer Links-->
-
-    <!--Copyright-->
-    <div class="footer-copyright py-3 text-center wow fadeIn" data-wow-delay="0.3s">
-      <div class="container-fluid">
-        © 2019 Copyright: <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
-      </div>
-    </div>
-    <!--/.Copyright-->
-
-  </footer>
-  <!--/Footer-->
-
-  <!--  SCRIPTS  -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="../js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="../js/mdb.min.js"></script>
-  <script>
-    new WOW().init();
-
-  </script>
-</body>
-
-</html>
+{#  <!--Footer-->#}
+{#  <footer class="page-footer pt-0">#}
+{##}
+{#    <!--Footer Links-->#}
+{#    <div class="container">#}
+{##}
+{#      <!--First row-->#}
+{#      <div class="row">#}
+{##}
+{#        <!--First column-->#}
+{#        <div class="col-md-12 wow fadeIn" data-wow-delay="0.3s">#}
+{##}
+{#          <div class="text-center d-flex justify-content-center my-4">#}
+{##}
+{#            <!--Facebook-->#}
+{#            <a class="p-2 m-2 fa-lg fb-ic"><i class="fab fa-facebook-f white-text fa-lg pr-md-4"> </i></a>#}
+{#            <!--Twitter-->#}
+{#            <a class="p-2 m-2 fa-lg tw-ic"><i class="fab fa-twitter white-text fa-lg pr-md-4"> </i></a>#}
+{#            <!--Google +-->#}
+{#            <a class="p-2 m-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g white-text fa-lg pr-md-4"> </i></a>#}
+{#            <!--Linkedin-->#}
+{#            <a class="p-2 m-2 fa-lg li-ic"><i class="fab fa-linkedin-in white-text fa-lg pr-md-4"> </i></a>#}
+{#            <!--Instagram-->#}
+{#            <a class="p-2 m-2 fa-lg ins-ic"><i class="fab fa-instagram white-text fa-lg pr-md-4"> </i></a>#}
+{#            <!--Pinterest-->#}
+{#            <a class="p-2 m-2 fa-lg pin-ic"><i class="fab fa-pinterest white-text fa-lg pr-md-4"> </i></a>#}
+{#          </div>#}
+{##}
+{#        </div>#}
+{#        <!--/First column-->#}
+{##}
+{#      </div>#}
+{#      <!--/First row-->#}
+{##}
+{#    </div>#}
+{#    <!--/Footer Links-->#}
+{##}
+{#    <!--Copyright-->#}
+{#    <div class="footer-copyright py-3 text-center wow fadeIn" data-wow-delay="0.3s">#}
+{#      <div class="container-fluid">#}
+{#        © 2019 Copyright: <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>#}
+{#      </div>#}
+{#    </div>#}
+{#    <!--/.Copyright-->#}
+{##}
+{#  </footer>#}
+{#  <!--/Footer-->#}
+{% endblock %}

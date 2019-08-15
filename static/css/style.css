@@ -4,12 +4,15 @@ header,
 .jarallax {
     height: 700px;
 }
+
 a {
     color: #ec407a;
 }
+
 a:hover {
     color: pink;
 }
+
 @media (max-width: 740px) {
     html,
     body,
@@ -38,6 +41,7 @@ a:hover {
     }
 }
 
+
 @media (min-width: 660px) and (max-width: 700px) {
     header .jarallax h1 {
         margin-bottom: 1.5rem !important;
@@ -49,7 +53,7 @@ a:hover {
 }
 
 .top-nav-collapse {
-    background-color: #EC407A !important;
+    background-color: rgba(35, 35, 35, 0.53) !important;
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -58,22 +62,16 @@ a:hover {
 
 @media (max-width: 768px) {
     .navbar:not(.top-nav-collapse) {
-        background: #EC407A !important;
+        background: rgba(35, 35, 35, 0.53) !important;
     }
 }
 
 @media (min-width: 800px) and (max-width: 850px) {
     .navbar:not(.top-nav-collapse) {
-        background: #EC407A !important;
+        background: rgba(35, 35, 35, 0.53) !important;
     }
 }
 
 footer.page-footer {
-    background-color: #383838;
-}
-
-@media (max-width: 450px) {
-    .display-3 {
-        font-size: 3rem;
-    }
+    background-color: rgba(35, 35, 35, 0.53) !important;
 }
