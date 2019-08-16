@@ -17,6 +17,7 @@ def upload_image_path(instance, filename):
 
 
 class User(models.Model):
+    featured = models.BooleanField('Destaque', default=False)
     first_name = models.CharField('Nome', max_length=30)
     last_name = models.CharField('Sobrenome', max_length=30)
     slug = models.SlugField('Nome Fantasia', max_length=30)
