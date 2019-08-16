@@ -14,6 +14,6 @@ class UserListView(ListView):
 
 
 def test(request):
-    return render(request, 'signup-page.html')
+    return render(request, 'profile-page.html')
 
-# profile-page.html
+

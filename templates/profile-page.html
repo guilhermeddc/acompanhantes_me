@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en" class="">
 
@@ -5,7 +7,6 @@
   <!-- Required meta tags always come first -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Material Design Bootstrap Template</title>
 
  {% include 'base/base_components/css.html' %}
@@ -43,8 +44,8 @@
     }
 
     .page-footer {
-      margin-top: 0px;
-      padding-top: 0px;
+      margin-top: 0;
+      padding-top: 0;
     }
 
   </style>
@@ -57,40 +58,12 @@
   <header>
 
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar aqua-gradient">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <strong>MDB</strong>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
-          aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
-            </li>
-          </ul>
-          <form class="form-inline">
-            <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-          </form>
-        </div>
-      </div>
-    </nav>
+    {% include 'base/base_components/navbar.html' %}
 
     <!-- Intro Section -->
-    <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient3.png); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <div class="view jarallax" data-jarallax='{"speed": 0.2}'
+         style="background-image: url({% static 'img/bg.jpg' %});
+          background-repeat: no-repeat; background-size: cover; background-position: center center;">
       <div class="mask rgba-indigo-slight">
         <div class="container h-100 d-flex justify-content-center align-items-center">
           <div class="row pt-5 mt-3">
@@ -535,7 +508,7 @@
   <!--Main Layout-->
 
   <!--Footer-->
-  <footer class="page-footer mdb-color lighten-3 text-center text-md-left">
+  <footer class="page-footer lighten-3 text-center text-md-left">
 
     <!--Footer Links-->
     <div class="container">
@@ -553,12 +526,7 @@
     <!--/Footer Links-->
 
     <!--Copyright-->
-    <div class="footer-copyright text-center py-3 wow fadeIn" data-wow-delay="0.3s">
-      <div class="container-fluid">
-        &copy; 2019 Copyright:
-        <a href="https://mdbootstrap.com/docs/jquery/"> MDBootstrap.com </a>
-      </div>
-    </div>
+    {% include 'base/base_components/footer_copyright.html' %}
     <!--/Copyright-->
 
   </footer>
